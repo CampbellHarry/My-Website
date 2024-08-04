@@ -58,3 +58,15 @@ body {
     transform: translateY(0%);
   }
 }
+.closer {
+  animation: closer 0.9s;
+}
+@keyframes closer{
+  0%{
+    transform: translateX(0%);
+    transform: translateY(-45%);
+  }
+  100%{
+    transform: translateX(1500%);
+  }
+}

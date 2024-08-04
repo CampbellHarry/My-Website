@@ -4,6 +4,21 @@ import image from 'next/image';
 import Expander from "../../components/expanders/expander";
 
 export default function Home() {
+    const hdevexpander = () => {
+        const hdevexpander = document.getElementById("hdevexpander");
+        const hdevexpanee = document.getElementById("hdevexpanee");
+        hdevexpanee?.classList.remove("hidden")
+        hdevexpanee?.classList.add("flex")
+        hdevexpander?.remove()
+    }
+    const chipmunkexpander = () => {
+        const chipmunkexpander = document.getElementById("chipmunkexpander");
+        const chipmunkkexpandee = document.getElementById("chipmunkkexpandee");
+        chipmunkkexpandee?.classList.remove("hidden")
+        chipmunkkexpandee?.classList.add("flex")
+        chipmunkexpander?.remove()
+
+    }
 return (
     <>
         <div className="bg-zinc-900 overflow-x-hidden text-zinc-400 bg-no-repeat">
@@ -72,8 +87,29 @@ return (
                                             SEO
                                         </div>
                                     </div>
-                                    <div className="mt-4 w-full items-center font-sans justify-center flex bg-gradient-to-r from-zinc-900/40 hover:from-zinc-300/40 cursor-pointer transition-all">
-                                        <p>{`</> Show Contributions`}</p>
+                                    <div className="mt-4 w-full py-2 items-center font-sans justify-center flex bg-gradient-to-r from-zinc-900/40 hover:from-zinc-300/40 cursor-pointer transition-all" onClick={hdevexpander} id="hdevexpander">
+                                        <p className="text-sm">{`</> Show Contributions`}</p>
+                                    </div>
+                                    <div className="hidden text-sm flex-col gap-2 mt-4" id="hdevexpanee">
+                                        <div className="flex bg-zinc-900/30 text-neutral-400 px-2 py-1 rounded-md">
+                                            Founded a startup software engineering company to build advanced large scale open source applications.
+                                        </div>
+                                        <div className="flex bg-zinc-900/30 text-neutral-400 px-2 py-1 rounded-md">
+                                            Developed a custom project planning application with real-time updates, changelogs, chats, and more.
+                                        </div>
+                                        <div className="flex bg-zinc-900/30 text-neutral-400 px-2 py-1 rounded-md">
+                                            Led a team of 3 developers to create a custom project planning application and a custom cyber security application.
+                                        </div>
+                                        <div className="flex bg-zinc-900/30 text-neutral-400 px-2 py-1 rounded-md">
+                                            Developed a custom cyber security application with CV scanning, Moderation, Payment processing.
+                                        </div>
+                                        <div className="flex bg-zinc-900/30 text-neutral-400 px-2 py-1 rounded-md">
+                                            Boosted my skills in TypeScript, JavaScript, Node.JS, Next.JS, React, Tailwind, MySQL, Convex, Git, While also building my people skills.
+                                        </div>
+                                        <div className="flex bg-zinc-900/30 text-neutral-400 px-2 py-1 rounded-md">
+                                            Made in house security systems for the applications to keep them secure.
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -118,8 +154,27 @@ return (
                                             Management
                                         </div>
                                     </div>
-                                    <div className="mt-4 w-full items-center font-sans justify-center flex bg-gradient-to-r from-zinc-900/40 hover:from-zinc-300/40 cursor-pointer transition-all">
-                                        <p>{`</> Show Contributions`}</p>
+                                    <div className="w-full flex flex-col">
+                                        <div className="mt-4 w-full py-2 items-center font-sans justify-center flex bg-gradient-to-r from-zinc-900/40 hover:from-zinc-300/40 cursor-pointer transition-all" onClick={chipmunkexpander} id="chipmunkexpander">
+                                            <p className="text-sm">{`</> Show Contributions`}</p>
+                                        </div>
+                                        <div className="hidden text-sm flex-col gap-2 mt-4" id="chipmunkkexpandee">
+                                            <div className="flex bg-zinc-900/30 text-neutral-400 py-1 px-2 rounded-md">
+                                                Trained Staff Members on IT software.
+                                            </div>
+                                            <div className="flex bg-zinc-900/30 text-neutral-400 py-1 px-2 rounded-md">
+                                                Maintained and debugged POS systems.
+                                            </div>
+                                            <div className="flex bg-zinc-900/30 text-neutral-400 py-1 px-2 rounded-md">
+                                                Assisted with networking issues.
+                                            </div>
+                                            <div className="flex bg-zinc-900/30 text-neutral-400 py-1 px-2 rounded-md">
+                                                Assisted with hardware issues.
+                                            </div>
+                                            <div className="flex bg-zinc-900/30 text-neutral-400 py-1 px-2 rounded-md">
+                                                Made the buisness 45% more revenue due to better IT systems.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

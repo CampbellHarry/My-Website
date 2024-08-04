@@ -1,6 +1,5 @@
 "use client"
 import Header from "../components/header/header";
-import image from 'next/image';
 import Expander from "../components/expanders/expander";
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
     <div className="mx-auto w-full max-w-[900px] px-4 text-lg sm:px-12 md:px-16">
     <div className="w-full flex flex-col md:px-5 md:py-5">
     <div className="bg-teal-500/20 border border-teal-400/20 rounded-md text-zinc-50 mb-10 p-2">
-          <h2 className="font-semibold">I am open to work</h2>
+          <h2 className="font-semibold">I'm open to work!</h2>
       </div>
       <div className="flex flex-row md:items-center items-start gap-5">
         <img src="/1720299869628.jpeg" className="h-[45px] w-[45px] rounded-full sm:h-[80px] sm:w-[80px]"></img>
