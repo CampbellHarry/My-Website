@@ -23,9 +23,8 @@ export default function Header() {
             setClosing(false);
         }, 300); 
     };
-
-    const handleOuterClick = (e) => {
-        if (e.target.id === "clickerouter") {
+    const handleOuterClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        if ((e.target as HTMLDivElement).id === "clickerouter") {
             closeContact();
         }
     };
