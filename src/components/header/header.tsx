@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
-    const [pathname, setPathname] = useState("");
+    const pathname = usePathname(); 
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [closing, setClosing] = useState(false);
 
@@ -16,13 +16,14 @@ export default function Header() {
         setClosing(true);
         const element = document.getElementById("sliderr");
         if (element) {
-          element.classList.add("closer")
+            element.classList.add("closer");
         }
         setTimeout(() => {
             setIsContactOpen(false);
             setClosing(false);
-        }, 300); 
+        }, 300);
     };
+
     const handleOuterClick = (e: React.MouseEvent<HTMLDivElement>) => {
         if ((e.target as HTMLDivElement).id === "clickerouter") {
             closeContact();
@@ -34,13 +35,14 @@ export default function Header() {
         if (mobiler) {
             mobiler.classList.remove("hidden");
         }
-    }
+    };
+
     const closemobiler = () => {
         const mobiler = document.getElementById("mobiler");
         if (mobiler) {
             mobiler.classList.add("hidden");
         }
-    }
+    };
 
     return (
         <>
