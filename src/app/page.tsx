@@ -23,7 +23,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-5 mt-10">
-        <p>I am a software developer based in the uk. I have 3 years of experience working in web development <Expander texttoexpand=" with my experience I enjoy developing high performance, secure and user focused websites like HProjects" />
+        <p>I am a software developer based in the uk. I have 3 years of experience working in web development and security engineering <Expander texttoexpand=" with my experience I enjoy developing high performance, secure and user focused websites like HProjects" />
         .</p>
         <p>
           Over those years, I have worked with a variety of different technologies

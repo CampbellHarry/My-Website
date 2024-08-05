@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Harry Campbell",
-  description: "Developer",
+  description: "Harry Campbell is a software developer based in the UK. He has 3 years of experience working in web development and security engineering.",
 };
 
 export default function RootLayout({
