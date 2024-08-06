@@ -76,7 +76,7 @@ export default function Home() {
                 <p className="text-xs">Student | Programmer | Graphical Designer | Full Stack Developer.</p>
               </div>
             </div>
-            <p className="mt-2">Personally, I have worked alongside Harry as a co-worker or under Harry on several projects such as games & websites. I can vouch for his exceptional abilities in problem-solving & project management.</p>
+            <p className="mt-2">I have worked alongside Harry as a co-worker or under Harry on several projects over the time. I have not yet met a developer which matches the almost mythical title of "The 10x Developer" more than Harry. His drive to actually get stuff done is outstanding; often inspiring his team members to do the same. Harry's development skills are quite striking for his age. I can whole-heartedly vouch for his skills in problem solving and management.</p>
           </div>
         </div>
       </div>
