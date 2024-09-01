@@ -22,6 +22,7 @@ export default function Home() {
 return (
     <>
         <div className="bg-zinc-900 overflow-x-hidden text-zinc-400 bg-no-repeat">
+            <div className="flex w-full items-center flex-col">
             <Header />
             <main className="flex min-h-screen flex-col items-center w-full">
                 <div className="mx-auto w-full max-w-[900px] px-4 text-lg sm:px-12 md:px-16">
@@ -182,6 +183,7 @@ return (
                     </div>
                 </div>
             </main>
+            </div>
         </div>
     </>
 )

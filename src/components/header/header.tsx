@@ -47,7 +47,7 @@ export default function Header() {
     return (
         <>
         <div className="bg-zinc-950 w-full fixed hidden h-full z-[100000000000]" id="mobiler">
-            <div className="flex flex-col justify-end relative items-end pr-5 pt-4 w-full text-neutral-100/60"><p onClick={closemobiler} className="cursor-pointer">X</p></div>
+            <div className="flex flex-col justify-end top-0 fixed items-end pr-5 pt-4 w-full text-neutral-100/60"><p onClick={closemobiler} className="cursor-pointer">X</p></div>
             <div className="flex flex-col justify-center relative items-center w-full text-neutral-100/60">
             <a href="/" className={`hover:text-neutral-50 flex transition-all relative cursor-pointer h-12 items-center flex-row gap-2 ${pathname === '/' && "underline"}`}>
                                     <svg className="flex w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21 20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9.48907C3 9.18048 3.14247 8.88917 3.38606 8.69972L11.3861 2.47749C11.7472 2.19663 12.2528 2.19663 12.6139 2.47749L20.6139 8.69972C20.8575 8.88917 21 9.18048 21 9.48907V20ZM19 19V9.97815L12 4.53371L5 9.97815V19H19Z"></path></svg>
@@ -65,9 +65,9 @@ export default function Header() {
                                 </a>
             </div>
         </div>
-            <header className="w-full md:flex items-center justify-center md:pt-10 dropintime">
-                <div>
-                    <div className="mx-auto w-full md:min-w-[900px] md:max-w-[900px] px-4 pb-[20px] pt-6 text-lg md:px-16">
+        <header className="w-full md:flex sticky top-0 z-20 mt-12 max-w-fit sm:px-2 items-center justify-center  dropintime">
+            <div className="relative h-full">
+                    <div className="mx-auto w-full h-full  md:min-w-[900px] md:max-w-[900px] px-4 pb-[20px] pt-6 text-lg md:px-16">
                         <div className="w-full flex justify-between items-center px-5 py-5 bg-zinc-800 border-zinc-600/40 rounded-full h-12 border">
                             <div className="flex flex-row justify-between w-full text-neutral-100/60">
                                 <div className="h-12 items-center hover:text-zinc-50 cursor-pointer md:hidden flex transition-all" onClick={mobileopener}>

@@ -1,12 +1,20 @@
 "use client"
 import Header from "../components/header/header";
+import "../styles/main.css"
 import Expander from "../components/expanders/expander";
 
 export default function Home() {
   return (
     <>
-    <div className="bg-zinc-900 overflow-x-hidden pb-4 m-0 text-zinc-400 bg-no-repeat">
-      <Header />
+  <div className="bg-gradient-to-tr from-zinc-900 via-zinc-950 to-zinc-900 w-full h-full relative pb-4 m-0 text-zinc-400 bg-no-repeat">
+    <div className="flex w-full items-center flex-col">
+    <Header />
+    <section className="flex w-full h-screen max-h-[1000px] mt-[-11rem] max-w-[2000px] mb-12 px-6 flex-col items-center justify-center gap-2">
+      <div className="flex items-center flex-col h-full justify-center w-full boxshadower shadow-b-xl rounded-b-[2.5rem] bg-[radial-gradient(100%_100%_at_50%_0%,_rgba(0,0,0,0.00)_0%,_rgba(0,0,0,0.00)_60%,_#40e0d01a_66%,_#55e0d2_80%,_#55e0d2_100%)] px-2 py-28 xs:gap-6 md:gap-10 lg:gap-6">
+        <h1 className="font-bold text-8xl z-30 bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-6 text-transparent bg-clip-text">Harry Campbell</h1>
+        <h2 className="font-semibold text-2xl bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-1 text-transparent bg-clip-text">The security focused software engineer for you.</h2>
+      </div>
+    </section>
     <main className="flex min-h-screen flex-col items-center w-full">
     <div className="mx-auto w-full max-w-[900px] px-4 text-lg sm:px-12 md:px-16">
     <div className="w-full flex flex-col md:px-5 md:py-5">
@@ -21,13 +29,12 @@ export default function Home() {
           <p className="font-mono font-semibold md:hidden text-sm">Developer from England</p>
         </div>
       </div>
-
       <div className="flex flex-col gap-5 mt-10">
         <p>I am a software developer based in the uk. I have 3 years of experience working in web development and security engineering <Expander texttoexpand=" with my experience I enjoy developing high performance, secure and user focused websites like HProjects" />
         .</p>
         <p>
           Over those years, I have worked with a variety of different technologies
-          <Expander texttoexpand=" including TypeScript, JavaScript, Node.JS, Next.JS, React, Tailwind, MySQL, Convex, Git" />. in a variety of different projects <Expander texttoexpand=" including HProjects, HCyber" />.
+          <Expander texttoexpand=" including TypeScript, JavaScript, Node.JS, Next.JS, React, Tailwind, MySQL, Convex, Git, AWS, Vercel, Railway" />. in a variety of different projects <Expander texttoexpand=" including HProjects, HCyber" />.
         </p>
         <p>At heart I am a full stack developer <Expander texttoexpand="( taking ideas from the drawingboard and transforming them into prestigious products in all aspects is my speciality )" /> with a sharp eye for good design and expertise in parts of the stack including frontend, backend and databases.</p>
         <p>You may know me as the founder of <a href="https://www.linkedin.com/company/hdevgroup/" className="underline weigh underline-offset-4 decoration-2 font-semibold hover:text-neutral-50 transition-all">Hdev Group</a><Expander texttoexpand="; a startup that I have created to make solutions for software that needs updating / creating." /> I have been working on it since early 2023 while balancing college <Expander texttoexpand="( In college I achived a first year distinction in Information technology )" /> and other jobs <Expander texttoexpand="including my IT support job at chipmunk chip shop" />.</p>
@@ -83,9 +90,10 @@ export default function Home() {
       <div className="mt-5">
         <p>Want to get in touch? Send me an <a className="underline weigh underline-offset-4 decoration-2 font-semibold hover:text-neutral-50 transition-all" href="mailto:hello@hdev.uk">email</a>.</p>
       </div>
-    </div>
-    </div>
+      </div>
+      </div>
     </main>
+    </div>
     </div>
     </>
   );
