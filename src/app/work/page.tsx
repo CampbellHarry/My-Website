@@ -95,7 +95,7 @@ return (
                                             Founded a startup software engineering company to build advanced large scale open source applications.
                                         </div>
                                         <div className="flex bg-zinc-900/30 text-neutral-400 px-2 py-1 rounded-md">
-                                            Developed a custom project planning application with real-time updates, changelogs, chats, and more.
+                                            Developed a custom project planning application with real-time updates, changelogs, chats, incident reports, and more.
                                         </div>
                                         <div className="flex bg-zinc-900/30 text-neutral-400 px-2 py-1 rounded-md">
                                             Led a team of 3 developers to create a custom project planning application and a custom cyber security application.
