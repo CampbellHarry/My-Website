@@ -9,8 +9,8 @@ export default function Home() {
   <div className="bg-gradient-to-tr from-zinc-900 via-zinc-950 to-zinc-900 w-full h-full relative pb-4 m-0 text-zinc-400 bg-no-repeat">
     <div className="flex w-full items-center flex-col">
     <Header />
-    <section className="flex w-full h-screen max-h-[1000px] mt-[-11rem] max-w-[2000px] mb-12 flex-col items-center justify-center gap-2">
-      <div className="flex items-center flex-col h-full justify-center w-full boxshadower shadow-b-xl rounded-t-[12.5rem] bg-[radial-gradient(100%_100%_at_50%_100%,_rgba(0,0,0,0.00)_0%,_rgba(0,0,0,0.00)_60%,_#40e0d01a_66%,_#55e0d2_80%,_#55e0d2_100%)] px-2 py-28 xs:gap-6 md:gap-10 lg:gap-6">
+    <section className="flex w-full h-screen max-h-[1000px] mt-[-11rem] max-w-[1850px] mb-12 flex-col items-center justify-center gap-2">
+      <div className="flex items-center flex-col h-full justify-center w-full boxshadower shadow-b-xl rounded-b-[12.5rem] bg-[radial-gradient(100%_100%_at_50%_10%,_rgba(0,0,0,0.00)_0%,_rgba(0,0,0,0.00)_60%,_#40e0d01a_66%,_#55e0d2_80%,_#55e0d2_100%)] px-[10rem] py-28 xs:gap-6 md:gap-10 lg:gap-6">
         <h1 className="font-bold text-8xl z-30 bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-6 text-transparent bg-clip-text">Harry Campbell</h1>
         <h2 className="font-semibold text-2xl bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-1 text-transparent bg-clip-text">The security focused software engineer for you.</h2>
       </div>
