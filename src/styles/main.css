@@ -1,3 +1,20 @@
 .boxshadower {
     box-shadow: 0 20px 2px -2px linear-gradient(to right, #40e0d05b, #ffffff);
 }
+
+.boxover {
+    animation: sweet 25s infinite linear;
+    background: radial-gradient(100% 100% at 50% 10%, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.00) 50%, #40e0d01a 60%, #55e0d2 80%, #55e0d2 100%);
+}
+
+@keyframes sweet {
+    0% {
+        background-size: 100% 100%;
+    }
+    50% {
+        background-size: 120% 120%;
+    }
+    100% {
+        background-size: 100% 100%;
+    }
+}

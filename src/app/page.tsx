@@ -10,8 +10,8 @@ export default function Home() {
     <div className="flex w-full items-center flex-col">
     <Header />
     <section className="flex w-full h-screen max-h-[1000px] mt-[-11rem] md:max-w-[1850px] mb-12 flex-col items-center justify-center gap-2">
-      <div className="flex items-center flex-col h-full justify-center w-full boxshadower shadow-b-xl rounded-b-[5rem] md:rounded-b-[12.5rem] bg-[radial-gradient(100%_100%_at_50%_10%,_rgba(0,0,0,0.00)_0%,_rgba(0,0,0,0.00)_60%,_#40e0d01a_66%,_#55e0d2_80%,_#55e0d2_100%)] px-[10rem] py-28 xs:gap-6 md:gap-10 lg:gap-6">
-        <h1 className="font-bold text-center text-8xl z-30 bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-6 text-transparent bg-clip-text">Harry Campbell</h1>
+      <div className="flex items-center flex-col h-full justify-center w-full boxshadower shadow-b-xl rounded-b-[5rem] md:rounded-b-[12.5rem] boxover px-[10rem] py-28 xs:gap-6 md:gap-10 lg:gap-6">
+        <h1 className="font-bold text-center text-8xl z-30  bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-6 text-transparent bg-clip-text">Harry Campbell</h1>
         <h2 className="font-semibold text-xl w-max bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-1 text-transparent bg-clip-text">The security focused software engineer for you.</h2>
       </div>
     </section>
