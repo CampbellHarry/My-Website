@@ -6,13 +6,15 @@ import Expander from "../components/expanders/expander";
 export default function Home() {
   return (
     <>
-  <div className="bg-gradient-to-tr from-zinc-900 via-zinc-950 to-zinc-900 w-full h-full relative pb-4 m-0 text-zinc-400 bg-no-repeat">
+  <div className="bg-gradient-to-tr flex items-center justify-center from-zinc-900 via-zinc-950 to-zinc-900 w-full h-full relative pb-4 m-0 text-zinc-400 bg-no-repeat">
     <div className="flex w-full items-center flex-col">
     <Header />
-    <section className="flex w-full h-screen max-h-[1000px] mt-[-11rem] md:max-w-[1850px] mb-12 flex-col items-center justify-center gap-2">
+    <section className="sm:flex hidden w-full h-screen max-h-[1000px] mt-[-11rem] max-w-[1850px] mb-12 flex-col items-center justify-center gap-2">
       <div className="flex items-center flex-col h-full justify-center w-full boxshadower shadow-b-xl rounded-b-[5rem] md:rounded-b-[12.5rem] boxover px-[10rem] py-28 xs:gap-6 md:gap-10 lg:gap-6">
-        <h1 className="font-bold text-center text-8xl z-30  bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-6 text-transparent bg-clip-text">Harry Campbell</h1>
-        <h2 className="font-semibold text-xl w-max bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-1 text-transparent bg-clip-text">The security focused software engineer for you.</h2>
+        <div className="flex w-max flex-col  items-center">
+          <h1 className="font-bold text-center text-4xl md:text-8xl z-30 bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-6 text-transparent bg-clip-text">Harry Campbell</h1>
+          <h2 className="font-semibold md:text-xl text-center max-w-[30rem] min-w-[1rem] bg-gradient-to-r text-wrap from-neutral-400 via-white to-neutral-400 py-1 text-transparent bg-clip-text">The security focused software engineer for you.</h2>
+        </div>
       </div>
     </section>
     <main className="flex min-h-screen flex-col items-center w-full">

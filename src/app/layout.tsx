@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="m-0 p-0 bg-zinc-900 scroll-smooth">{children}</body>
+      <body className="m-0 p-0 bg-zinc-900 flex items-center justify-center scroll-smooth">{children}</body>
     </html>
   );
 }
