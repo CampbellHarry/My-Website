@@ -2,6 +2,7 @@
 import Header from "../../components/header/header";
 import image from 'next/image';
 import Expander from "../../components/expanders/expander";
+import Footer from "../../components/footer/footer";
 
 export default function Home() {
     const hdevexpander = () => {
@@ -21,7 +22,7 @@ export default function Home() {
     }
 return (
     <>
-    <div className="bg-zinc-900 w-full h-full relative pb-4 m-0 text-zinc-400 bg-no-repeat">
+    <div className="background w-full h-full relative pb-4 m-0 text-zinc-400 bg-no-repeat">
     <div className="flex w-full items-center flex-col">
             <Header />
             <main className="flex min-h-screen flex-col items-center w-full">
@@ -34,7 +35,7 @@ return (
                             </p>
                         </div>
                         <div className="flex flex-col gap-5 mt-10">
-                            <div className="flex flex-col items-start  bg-zinc-800 w-full rounded-lg p-3">
+                            <div className="flex flex-col items-start  boxbg w-full rounded-lg p-3">
                                 <div className="flex flex-col justify-between w-full items-start">
                                     <div className="flex flex-row justify-between w-full">
                                         <h1 className="text-zinc-400 text-sm">
@@ -114,7 +115,7 @@ return (
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col items-start  bg-zinc-800 w-full rounded-lg p-3">
+                            <div className="flex flex-col items-start  boxbg w-full rounded-lg p-3">
                                 <div className="flex flex-col justify-between w-full items-start">
                                     <div className="flex flex-row justify-between w-full">
                                         <h1 className="text-zinc-400 text-sm">
@@ -183,6 +184,7 @@ return (
                     </div>
                 </div>
             </main>
+            <Footer />
             </div>
         </div>
     </>

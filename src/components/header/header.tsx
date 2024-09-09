@@ -49,7 +49,7 @@ export default function Header() {
 
     return (
         <>
-        <div className="bg-zinc-950 w-full fixed hidden h-full z-[100000000000]" id="mobiler">
+        <div className="bg-zinc-950 w-full fixed hidden h-full z-100" id="mobiler">
             <div className="flex flex-col justify-end top-0 fixed items-end pr-5 pt-4 w-full text-neutral-100/60"><p onClick={closemobiler} className="cursor-pointer">X</p></div>
             <div className="flex flex-col justify-center relative items-center w-full text-neutral-100/60">
             <a href="/" className={`hover:text-neutral-50 flex transition-all relative cursor-pointer h-12 items-center flex-row gap-2`}>
@@ -69,7 +69,7 @@ export default function Header() {
                                 </a>
             </div>
         </div>
-        <header className="w-full :flex sticky top-0 z-20 mt-12 max-w-fit sm:px-2 items-center justify-center  dropintime">
+        <header className="w-full :flex sticky top-0 z-50 mt-12 max-w-fit sm:px-2 items-center justify-center  dropintime">
             <div className="relative h-full">
                     <div className="mx-auto w-full h-full md:min-w-[900px] sm:min-w-[550px]  md:max-w-[900px] px-4 pb-[20px] pt-6 text-lg md:px-16">
                         <div className="w-full flex justify-between items-center px-5 py-5 bg-zinc-800 border-zinc-600/40 rounded-full h-12 border">
@@ -92,7 +92,7 @@ export default function Header() {
                                     Work
                                     {pathname === '/work' && <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-zinc-400/0 via-zinc-400/40 to-zinc-400/0"></span>}
                                 </a>
-                                <a onClick={contactdropper} className="hover:text-neutral-50 text-neutral-100/60 relative transition-all cursor-pointer h-12 flex items-center gap-2">
+                                <a href="/#contact" className="hover:text-neutral-50 text-neutral-100/60 relative transition-all cursor-pointer h-12 flex items-center gap-2">
                                     <svg className="flex w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 7C8.5 8.10457 7.60457 9 6.5 9C5.39543 9 4.5 8.10457 4.5 7C4.5 5.89543 5.39543 5 6.5 5C7.60457 5 8.5 5.89543 8.5 7ZM2.5 7C2.5 9.20914 4.29086 11 6.5 11C8.70914 11 10.5 9.20914 10.5 7C10.5 4.79086 8.70914 3 6.5 3C4.29086 3 2.5 4.79086 2.5 7ZM9 16.5C9 15.1193 7.88071 14 6.5 14C5.11929 14 4 15.1193 4 16.5V19H9V16.5ZM11 21H2V16.5C2 14.0147 4.01472 12 6.5 12C8.98528 12 11 14.0147 11 16.5V21ZM19.5 7C19.5 8.10457 18.6046 9 17.5 9C16.3954 9 15.5 8.10457 15.5 7C15.5 5.89543 16.3954 5 17.5 5C18.6046 5 19.5 5.89543 19.5 7ZM13.5 7C13.5 9.20914 15.2909 11 17.5 11C19.7091 11 21.5 9.20914 21.5 7C21.5 4.79086 19.7091 3 17.5 3C15.2909 3 13.5 4.79086 13.5 7ZM20 16.5C20 15.1193 18.8807 14 17.5 14C16.1193 14 15 15.1193 15 16.5V19H20V16.5ZM22 21H13V16.5C13 14.0147 15.0147 12 17.5 12C19.9853 12 22 14.0147 22 16.5V21Z"></path></svg>
                                     <p>Contact</p>
                                 </a>

@@ -2,6 +2,7 @@
 import Header from "../../components/header/header";
 import image from 'next/image';
 import Expander from "../../components/expanders/expander";
+import Footer from "../../components/footer/footer";
 
 export default function Home() {
     const photoexpander = () => {
@@ -14,8 +15,8 @@ export default function Home() {
     }
 return (
     <>
-  <div className="bg-zinc-900  w-full h-full relative pb-4 m-0 text-zinc-400 bg-no-repeat">
-      <div className="flex w-full items-center flex-col">
+    <div className="bg-gradient-to-tr flex items-center justify-center background w-full h-full relative m-0 text-zinc-400 bg-no-repeat">
+        <div className="flex w-full items-center flex-col">
         <Header />
             <main className="flex min-h-screen flex-col items-center w-full">
                 <div className="mx-auto w-full max-w-[900px] px-4 text-lg sm:px-12 md:px-16">
@@ -27,7 +28,7 @@ return (
                             </p>
                         </div>
                         <div className="flex flex-col gap-5 mt-10">
-                            <div className="flex flex-col items-start  bg-zinc-800 w-full rounded-lg p-3">
+                            <div className="flex flex-col items-start boxbg w-full rounded-lg p-3">
                                 <div className="flex flex-row justify-between w-full items-start">
                                     <div className="flex flex-row gap-3  items-center">
                                         <h1 className="text-zinc-100 font-semibold text-xl">
@@ -97,7 +98,7 @@ return (
                                             </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col items-start  bg-zinc-800 w-full rounded-lg p-3">
+                            <div className="flex flex-col items-start  boxbg w-full rounded-lg p-3">
                                 <div className="flex flex-row justify-between w-full items-start">
                                     <div className="flex flex-row gap-3  items-center">
                                         <h1 className="text-zinc-100 font-semibold text-xl">
@@ -134,6 +135,7 @@ return (
                     </div>
                 </div>
             </main>
+            <Footer />
             </div>
         </div>
     </>
