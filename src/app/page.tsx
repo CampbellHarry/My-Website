@@ -75,12 +75,12 @@ export default function Home() {
     <div className="mx-auto w-full max-w-[1500px] px-4 text-lg sm:px-12 md:px-16 relative">
     <div className="w-full flex flex-col md:px-5 md:py-5">
       <div className="flex flex-col gap-5 mt-10 w-full">
-      <h1 className="font-medium text-white text-3xl mb-12">About me</h1>
+      <h1 className="font-medium text-white text-3xl mb-12 hidden sm:flex">About me</h1>
         <div className="flex flex-col md:flex-row gap-5 w-full h-full">
           <div className="boxbg rounded-3xl shinytop overflow-hidden px-4 md:p-6 gap-5 py-8 md:w-1/2 min-h-[20rem] h-full flex items-center justify-center flex-col text-white">
             <img src="https://media.licdn.com/dms/image/v2/D4E03AQE8xiUVqps7_g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720299869628?e=1731542400&v=beta&t=jZ3M2zPH5734WsO3r65MJNRJ3i_phkCBEQW5gk833Ug" className="rounded-full w-[10rem]"></img>
             <div className="flex items-center flex-col">
-              <h1 className="font-semibold">Harry Campbell</h1>
+              <h1 className="font-bold text-xl bg-gradient-to-r from-neutral-400 via-white to-neutral-400 text-transparent bg-clip-text">Harry Campbell</h1>
               <p className="font-medium">Security. Development. Planning.</p>
             </div>
           </div>
@@ -106,6 +106,70 @@ export default function Home() {
               <h1 className="font-semibold ">Contact</h1>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col mt-12 w-full">
+        <h1 className="font-medium text-white text-3xl mb-12">My Work</h1>
+        <div className="flex flex-col md:flex-row gap-5 w-full">
+          <div className="flex flex-col w-full gap-5">
+            <div className="boxbg rounded-3xl shinytop px-4 md:p-6 gap-5 py-8 w-full h-full flex items-center justify-center flex-col text-white">
+              <img src="/Screenshot 2024-09-09 140118.png" className="w-auto"/>
+            </div>
+            <div className="boxbg rounded-3xl shinytop px-4 md:p-6 gap-5 py-8 w-full h-full flex items-center justify-center flex-col text-white">
+              <img src="/Screenshot 2024-09-09 135805.png" className="w-auto"/>
+            </div>
+          </div>
+          <div className="boxbg rounded-3xl shinytop px-4 md:p-6 gap-5 py-8 w-full h-full flex items-center justify-center flex-col text-white">
+            <img src="/Screenshot 2024-09-09 135839.png" className="w-auto"/>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col mt-12 w-full">
+        <h1 className="font-medium text-white text-3xl mb-12">My Skills</h1>
+        <div className="flex flex-row flex-wrap items-center justify-center md:flex-row gap-5 w-full">
+          <div className="boxbg rounded-xl goldtop px-4 md:p-6 gap-5 py-8 w-full max-w-[10rem] h-full flex items-center justify-center flex-col text-white">
+            TypeScript
+          </div>
+          <div className="boxbg rounded-xl goldtop px-4 md:p-6 gap-5 py-8 w-full max-w-[10rem] h-full flex items-center justify-center flex-col text-white">
+            JavaScript
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            Python
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            SQL
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            Security
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            React
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            Tailwind
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            Node.js
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            Next.js
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            AWS
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            Docker
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            Convex
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            MySQL
+          </div>
+          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
+            SEO
+          </div>
+
         </div>
       </div>
       <div className="flex flex-col mt-12 w-full">

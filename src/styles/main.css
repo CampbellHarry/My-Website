@@ -76,3 +76,17 @@ body{
         top: -1.5rem;
     }
 }
+.slidein{
+    animation: slidedown 0.5s forwards;
+}
+.sliderup{
+    animation: slidedown 0.5s forwards reverse;
+}
+@keyframes slidedown {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0;
+    }
+}
