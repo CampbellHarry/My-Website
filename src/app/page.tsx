@@ -90,8 +90,8 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-5 w-full">
-          <div className="boxbg rounded-xl shinytop px-4 md:p-6 gap-5 py-8 w-full md:flex-1 mdmax-h-[7rem] mdmin-h-[7rem] h-full flex flex-col">
-            <div className="flex justify-between h-auto md:h-[7rem] flex-col">
+          <div className="boxbg rounded-xl shinytop px-4 md:p-6 gap-5 py-8 w-full md:flex-1 md:max-h-[7rem] md:min-h-[7rem] h-full flex flex-col">
+            <div className="flex justify-between  md:h-[7rem] flex-col">
               <h1 className="font-normal text-sm">Facts about me</h1>
               <div>
                 <p className="text-white" id="factgen"></p>
