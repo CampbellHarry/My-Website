@@ -2,7 +2,8 @@
 import Header from "../components/header/header";
 import "../styles/main.css"
 import React, { useState } from 'react';
-import {AnimatedText, SecondTextAnimation, TextTopAnimation, LinkedinView, CtaZone, Testimonials1, Testimonials2, Testimonials3} from "../components/animtext/firstboxtext";
+import Image from 'next/image'
+import {AnimatedText, SecondTextAnimation, TextTopAnimation, LinkedinView, CtaZone, Testimonials1, Testimonials2, Testimonials3, Gripperzoom} from "../components/animtext/firstboxtext";
 import { useEffect } from "react";
 import Footer from "../components/footer/footer";
 import Confetti from 'react-confetti'
@@ -33,7 +34,23 @@ export default function Home() {
         }, 1000);
       }
     }
+    function ProjectCard({ imageSrc, title, description, technologies }: any) {
+      return (
+        <div className="boxbg rounded-3xl relative shinytop p-6 flex flex-col gap-4">
+          <Image src={imageSrc} alt={title} width={800} height={450} className="rounded-lg" />
 
+          <h3 className="text-xl font-semibold text-white">{title}</h3>
+          <p className="text-gray-300">{description}</p>
+          <div className="flex flex-wrap gap-2">
+            {technologies.map((tech:any, index:any) => (
+              <span key={index} className="bg-gray-700 text-white px-2 py-1 rounded text-sm">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      )
+    }
   useEffect (() => {
     const facts = [
       "I wrote my first line of code when i was 13.",
@@ -76,18 +93,9 @@ export default function Home() {
     <div className="w-full flex flex-col md:px-5 md:py-5">
       <div className="flex flex-col gap-5 mt-10 w-full">
       <h1 className="font-medium text-white text-3xl mb-12 hidden sm:flex">About me</h1>
-        <div className="flex flex-col md:flex-row gap-5 w-full h-full">
-          <div className="boxbg rounded-3xl shinytop overflow-hidden px-4 md:p-6 gap-5 py-8 md:w-1/2 min-h-[20rem] h-full flex items-center justify-center flex-col text-white">
-            <img src="https://media.licdn.com/dms/image/v2/D4E03AQE8xiUVqps7_g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720299869628?e=1731542400&v=beta&t=jZ3M2zPH5734WsO3r65MJNRJ3i_phkCBEQW5gk833Ug" className="rounded-full w-[10rem]"></img>
-            <div className="flex items-center flex-col">
-              <h1 className="font-bold text-xl bg-gradient-to-r from-neutral-400 via-white to-neutral-400 text-transparent bg-clip-text">Harry Campbell</h1>
-              <p className="font-medium">Security. Development. Planning.</p>
-            </div>
-          </div>
-          <div className="fulltopgradient justify-between rounded-3xl shinytop px-4 md:p-10 py-9 w-full min-h-[20rem] h-full flex flex-col text-white relative">
+        <div className="flex flex-col md:flex-row justify-end gap-5 w-full h-full">
+          <Gripperzoom />
               <AnimatedText />
-            <SecondTextAnimation />
-          </div>
         </div>
         <div className="flex flex-col md:flex-row gap-5 w-full">
           <div className="boxbg rounded-xl shinytop px-4 md:p-6 gap-5 py-8 w-full md:flex-1 md:max-h-[7rem] md:min-h-[7rem] h-full flex flex-col">
@@ -108,22 +116,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col mt-12 w-full">
-        <h1 className="font-medium text-white text-3xl mb-12">My Work</h1>
-        <div className="flex flex-col md:flex-row gap-5 w-full">
-          <div className="flex flex-col w-full gap-5">
-            <div className="boxbg rounded-3xl shinytop px-4 md:p-6 gap-5 py-8 w-full h-full flex items-center justify-center flex-col text-white">
-              <img src="/Screenshot 2024-09-09 140118.png" className="w-auto"/>
-            </div>
-            <div className="boxbg rounded-3xl shinytop px-4 md:p-6 gap-5 py-8 w-full h-full flex items-center justify-center flex-col text-white">
-              <img src="/Screenshot 2024-09-09 135805.png" className="w-auto"/>
-            </div>
-          </div>
-          <div className="boxbg rounded-3xl shinytop px-4 md:p-6 gap-5 py-8 w-full h-full flex items-center justify-center flex-col text-white">
-            <img src="/Screenshot 2024-09-09 135839.png" className="w-auto"/>
-          </div>
-        </div>
-      </div>
+
       <div className="flex flex-col mt-12 w-full">
         <h1 className="font-medium text-white text-3xl mb-12">My Skills</h1>
         <div className="flex flex-row flex-wrap items-center justify-center md:flex-row gap-5 w-full">
@@ -169,7 +162,6 @@ export default function Home() {
           <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
             SEO
           </div>
-
         </div>
       </div>
       <div className="flex flex-col mt-12 w-full">

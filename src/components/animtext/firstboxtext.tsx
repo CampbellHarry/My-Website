@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -7,6 +8,28 @@ gsap.registerPlugin(ScrollTrigger);
 const AnimatedText = () => {
     useEffect(() => {
         const wordshower = document.querySelectorAll('.wordshow');
+        const fulltopgradient = document.querySelector('.fulltopgradient');
+        if (window.innerWidth <= 640) {
+          gsap.to(fulltopgradient, {
+            width: "100%",
+            duration: 0,
+          });
+        } else {
+        gsap.fromTo(
+          fulltopgradient,
+          { width: "120%", position: 'relative' },
+          {
+            width: "90rem",
+            position: 'relative',
+            opacity: 1,
+            duration: 3,
+            scrollTrigger: {
+              trigger: fulltopgradient,
+              start: 'top 80%',
+            },
+          }
+        );
+      }
         wordshower.forEach((word, index) => {
           gsap.fromTo(
             word,
@@ -26,34 +49,37 @@ const AnimatedText = () => {
       }, []);
 
   return (
-    <h1 className="relative mb-12 text-xl flex gap-1.5 flex-wrap md:text-2xl flex-row md:mb-24">
-      <div className="wordshow">I</div>
-      <div className="wordshow">am</div>
-      <div className="wordshow">a</div>
-      <div className="wordshow">software</div>
-      <div className="wordshow">engineer</div>
-      <div className="wordshow">with</div>
-      <div className="wordshow">a</div>
-      <div className="wordshow">focus</div>
-      <div className="wordshow">on</div>
-      <div className="wordshow">security,</div>
-      <div className="wordshow">development,</div>
-      <div className="wordshow">and</div>
-      <div className="wordshow">project</div>
-      <div className="wordshow">planning.</div>
-      <div className="wordshow">Since</div>
-      <div className="wordshow">2022,</div>
-      <div className="wordshow">I</div>
-      <div className="wordshow">have</div>
-      <div className="wordshow">collaborated</div>
-      <div className="wordshow">with</div>
-      <div className="wordshow">diverse</div>
-      <div className="wordshow">teams,</div>
-      <div className="wordshow">companies,</div>
-      <div className="wordshow">and</div>
-      <div className="wordshow">individuals</div>
-      <div className="wordshow">worldwide.</div>
-    </h1>
+    <div className="fulltopgradient justify-between relative rounded-3xl shinytop px-4 md:p-10 py-9 w-full min-h-[20rem] h-full flex flex-col text-white">
+      <h1 className="relative mb-12 text-xl flex gap-1.5 flex-wrap md:text-2xl flex-row md:mb-24">
+        <div className="wordshow">I</div>
+        <div className="wordshow">am</div>
+        <div className="wordshow">a</div>
+        <div className="wordshow">software</div>
+        <div className="wordshow">engineer</div>
+        <div className="wordshow">with</div>
+        <div className="wordshow">a</div>
+        <div className="wordshow">focus</div>
+        <div className="wordshow">on</div>
+        <div className="wordshow">security,</div>
+        <div className="wordshow">development,</div>
+        <div className="wordshow">and</div>
+        <div className="wordshow">project</div>
+        <div className="wordshow">planning.</div>
+        <div className="wordshow">Since</div>
+        <div className="wordshow">2022,</div>
+        <div className="wordshow">I</div>
+        <div className="wordshow">have</div>
+        <div className="wordshow">collaborated</div>
+        <div className="wordshow">with</div>
+        <div className="wordshow">diverse</div>
+        <div className="wordshow">teams,</div>
+        <div className="wordshow">companies,</div>
+        <div className="wordshow">and</div>
+        <div className="wordshow">individuals</div>
+        <div className="wordshow">worldwide.</div>
+      </h1>
+      <SecondTextAnimation />
+    </div>
   );
 };
 
@@ -79,7 +105,7 @@ const SecondTextAnimation = () => {
       }, []);
     return(
         <h1 className="text-sm zoomup">
-            Driven by a passion to safeguard the future of the internet by neutralizing tomorrow’s threats, ensuring a safer today.
+            <i>"Driven by a passion to safeguard the future of the internet by neutralizing tomorrow’s threats, ensuring a safer today."</i> - Harry Campbell
         </h1>
     )
 }
@@ -502,6 +528,73 @@ export function Testimonials3(){
   </div>
   )
 }
+export function Gripperzoom(){
+  // we will have a cursor that will drag the image into position
+  useEffect(() => {
+    const Gripperzoom = document.querySelectorAll('.Gripperzoom');
+    const cursormover = document.querySelectorAll('.cursormover');
+    if (window.innerWidth <= 640) {
+      gsap.to(Gripperzoom, {
+        width: "100%",
+        duration: 0,
+      });
+    } else {
+      gsap.fromTo(
+        Gripperzoom,
+        { top: 0, left: "-40rem", position: "relative", width: "60%", },
+        {
+          top: "0rem",
+          width: "50rem",
+          position: "relative",
+          left: 0,
+          zIndex: 50,
+          opacity: 1,
+          duration: 3,
+          scrollTrigger: {
+            trigger: Gripperzoom,
+            start: 'top 80%',
+          },
+        }
+      );
+      gsap.to(
+        cursormover,
+        {
+          delay: 3,
+          opacity: 0,
+          left: "-70rem",
+          top: "-20rem",
+          duration: 3,
+          scrollTrigger: {
+            trigger: Gripperzoom,
+            start: 'top 80%',
+          },
+        }
+      );
+    }
+  }, []);
 
+  return(
+    <>
+    <div className="flex flex-row relative z-50 w-full md:w-1/2 Gripperzoom">
+    <div className="absolute w-8 hidden sm:flex z-50 right-0 text-white top-4 cursormover">
+      <svg className="w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.9093 12.3603L17.0007 20.8537L14.1816 21.8798L11.0902 13.3864L6.91797 16.5422L8.4087 1.63318L19.134 12.0959L13.9093 12.3603Z"></path></svg>
+    </div>
+    <div className="boxbg rounded-3xl relative shinytop overflow-hidden px-4 md:p-6 gap-5 py-8 w-full min-h-[20rem] h-full flex items-center justify-center flex-col text-white">
+    <Image 
+                src="/1720299869628.jpeg" 
+                alt="Harry Campbell"
+                width={160}
+                height={160}
+                className="rounded-full"
+              />
+      <div className="flex items-center flex-col">
+        <h1 className="font-bold text-xl bg-gradient-to-r from-neutral-400 via-white to-neutral-400 text-transparent bg-clip-text">Harry Campbell</h1>
+        <p className="font-medium">Security. Development. Planning.</p>
+      </div>
+    </div>
+    </div>
+    </>
+  )
+}
 
 export {AnimatedText, SecondTextAnimation, TextTopAnimation};
