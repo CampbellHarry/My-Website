@@ -30,6 +30,35 @@ body{
 .headerbackground{
     background-color: hsla(226, 87%, 3%, 0.116);
 }
+.boujee-text {
+    --bg-size: 400%;
+    --color-one: #fff;
+    --color-two: #858585;
+    font-family: sans-serif;
+
+    background: linear-gradient(
+        90deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .boujee-text {
+      animation: move-bg 8s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
+  
+
 .shinytop{
     border-top: 1px solid;
     border-image: linear-gradient(to right, #40e0d000, #40e0d00e, #55e0d270, #40e0d00e, #40e0d000) 1;

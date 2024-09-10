@@ -68,7 +68,7 @@ export default function Home() {
     <section className="sm:flex hidden w-full h-screen max-h-[1000px] z-20 relative mt-[-10rem] max-w-[1850px] mb-12 flex-col items-center justify-center gap-2">
       <div className="flex items-center flex-col h-full justify-center z-20 w-full boxshadower shadow-b-xl rounded-b-[2rem] rounded-tl-[5rem]  boxover px-[10rem] py-28 xs:gap-6 md:gap-10 lg:gap-6">
         <div className="flex  flex-col w-full items-center">
-          <h1 className="font-bold text-center text-4xl md:text-8xl z-30 bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-6 text-transparent bg-clip-text">Harry Campbell</h1>
+          <h1 className="font-bold text-center text-4xl md:text-8xl z-30 bg-gradient-to-r from-neutral-400 via-white to-neutral-400 py-6 text-transparent bg-clip-text boujee-text">Harry Campbell</h1>
           <TextTopAnimation />
         </div>
       </div>
