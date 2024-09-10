@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Image from 'next/image'
 import {AnimatedText, SecondTextAnimation, TextTopAnimation, LinkedinView, CtaZone, Testimonials1, Testimonials2, Testimonials3, Gripperzoom} from "../components/animtext/firstboxtext";
 import { useEffect } from "react";
+import Skills from "../components/skills/skills";
 import Footer from "../components/footer/footer";
 import Confetti from 'react-confetti'
 
@@ -34,23 +35,7 @@ export default function Home() {
         }, 1000);
       }
     }
-    function ProjectCard({ imageSrc, title, description, technologies }: any) {
-      return (
-        <div className="boxbg rounded-3xl relative shinytop p-6 flex flex-col gap-4">
-          <Image src={imageSrc} alt={title} width={800} height={450} className="rounded-lg" />
 
-          <h3 className="text-xl font-semibold text-white">{title}</h3>
-          <p className="text-gray-300">{description}</p>
-          <div className="flex flex-wrap gap-2">
-            {technologies.map((tech:any, index:any) => (
-              <span key={index} className="bg-gray-700 text-white px-2 py-1 rounded text-sm">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      )
-    }
   useEffect (() => {
     const facts = [
       "I wrote my first line of code when i was 13.",
@@ -116,54 +101,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="flex flex-col mt-12 w-full">
-        <h1 className="font-medium text-white text-3xl mb-12">My Skills</h1>
-        <div className="flex flex-row flex-wrap items-center justify-center md:flex-row gap-5 w-full">
-          <div className="boxbg rounded-xl goldtop px-4 md:p-6 gap-5 py-8 w-full max-w-[10rem] h-full flex items-center justify-center flex-col text-white">
-            TypeScript
-          </div>
-          <div className="boxbg rounded-xl goldtop px-4 md:p-6 gap-5 py-8 w-full max-w-[10rem] h-full flex items-center justify-center flex-col text-white">
-            JavaScript
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            Python
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            SQL
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            Security
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            React
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            Tailwind
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            Node.js
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            Next.js
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            AWS
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            Docker
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            Convex
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            MySQL
-          </div>
-          <div className="boxbg rounded-xl max-w-[10rem] w-full goldtop px-4 md:p-6 gap-5 py-8  h-full flex items-center justify-center flex-col text-white">
-            SEO
-          </div>
-        </div>
-      </div>
+      <Skills />
       <div className="flex flex-col mt-12 w-full">
         <h1 className="font-medium text-white text-3xl mb-12">Testimonials</h1>
         <Testimonials1 />
@@ -182,7 +120,7 @@ export default function Home() {
             <div className="py-1 px-3 flex flex-row justify-center gap-2 items-center rounded-md">
             <svg className="w-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z"></path></svg><h2 className="text-white">hello@hdev.uk</h2>
             </div>
-            <div className="py-2 px-4 bg-neutral-700/30 rounded-md text-white transition-all clicker cursor-pointer" onClick={CopyPaste}>
+            <div className="py-2 px-4 bg-neutral-700/30 rounded-md text-white transition-all clicker cursor-pointer select-none" onClick={CopyPaste}>
             <svg className="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z"></path></svg>
             </div>
           </div>

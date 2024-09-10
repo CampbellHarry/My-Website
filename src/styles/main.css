@@ -27,6 +27,9 @@ body{
 .background{
     background-color: hsl(229 84% 3%);
 }
+.headerbackground{
+    background-color: hsla(226, 87%, 3%, 0.116);
+}
 .shinytop{
     border-top: 1px solid;
     border-image: linear-gradient(to right, #40e0d000, #40e0d00e, #55e0d270, #40e0d00e, #40e0d000) 1;
