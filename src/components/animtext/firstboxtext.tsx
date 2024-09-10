@@ -541,7 +541,7 @@ export function Gripperzoom(){
     } else {
       gsap.fromTo(
         Gripperzoom,
-        { top: 0, left: "-40rem", position: "relative", width: "60%", },
+        { top: 0, left: "-70rem", opacity: 0, position: "relative", width: "60%", },
         {
           top: "0rem",
           width: "50rem",
