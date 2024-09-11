@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import { useState } from "react";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -541,7 +542,7 @@ export function Gripperzoom(){
     } else {
       gsap.fromTo(
         Gripperzoom,
-        { top: 0, left: "-70rem", opacity: 0, position: "relative", width: "50rem", },
+        { top: 0, left: "-70rem", opacity: 0, position: "relative", width: "100%", },
         {
           top: "0rem",
           width: "50rem",

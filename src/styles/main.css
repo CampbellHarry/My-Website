@@ -98,7 +98,20 @@ body{
     height: 100%;
 }
 .gradiented{
-    background: linear-gradient(to top,#000000 0,#00000000),linear-gradient(85deg,#07476d 12%,#0a2366 34%,#32074b 80%)
+    background: linear-gradient(to top,#000000 0,#00000000),linear-gradient(85deg,#07476d 12%,#0a2366 34%,#32074b 80%);
+    animation: gradientmover 10s infinite forwards;
+}
+
+@keyframes gradientmover {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background: linear-gradient(to top,#000000 0,#00000000),linear-gradient(85deg,#07476d 12%,#0a2366 34%,#32074b 80%);
+    }
+    100% {
+        background-position: 10% 10%;
+    }
 }
 @keyframes textup {
     0% {

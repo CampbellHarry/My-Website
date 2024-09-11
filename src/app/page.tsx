@@ -7,6 +7,7 @@ import {AnimatedText, SecondTextAnimation, TextTopAnimation, LinkedinView, CtaZo
 import { useEffect } from "react";
 import Skills from "../components/skills/skills";
 import Footer from "../components/footer/footer";
+import Projects from "../components/projects/projects";
 import Confetti from 'react-confetti'
 
 export default function Home() {
@@ -101,6 +102,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Projects />
       <Skills />
       <div className="flex flex-col mt-12 w-full">
         <h1 className="font-medium text-white text-3xl mb-12">Testimonials</h1>
@@ -110,8 +112,8 @@ export default function Home() {
       </div>
       </div>
       </div>
-      <section className="flex flex-col mt-10 h-[45rem] w-full gradiented  items-center justify-center" id="contact">
-        <div className="max-w-[1500px] px-4 py-12 w-full flex items-center h-full flex-col justify-center">
+      <section className="flex flex-col mt-10 h-auto w-full gradiented  items-center justify-center" id="contact">
+        <div className="max-w-[1500px] px-4 py-12 w-full flex items-center h-[50rem] flex-col justify-center">
           <CtaZone />
           <div className="w-full flex">
             <p className="text-white md:w-1/3 text-md font-medium">Looking for a project partner to help turn ideas into reality? I'm ready. Let's deploy something incredible.</p>

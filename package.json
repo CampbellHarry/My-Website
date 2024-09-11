@@ -15,12 +15,14 @@
     "convex": "^1.13.2",
     "gsap": "^3.12.5",
     "next": "14.2.5",
+    "node-fetch": "^3.3.2",
     "react": "^18",
     "react-confetti": "^6.1.0",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18",
-    "react-router-dom": "^6.26.0"
+    "react-router-dom": "^6.26.0",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@types/node": "^20",
