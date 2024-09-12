@@ -113,8 +113,8 @@ export default function Skills() {
 <SkillCard
   title="AWS"
   description="I use AWS to deploy, scale, and manage cloud-based applications."
-  years={[1]}
-  skilllevel="Beginner"
+  years={[1.5]}
+  skilllevel="Moderate"
 />
 <SkillCard
   title="Convex"
