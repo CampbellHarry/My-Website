@@ -58,7 +58,7 @@ export default function Projects() {
                     link=""
                     type="In Progress"
                     technology={['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'GSAP', 'Convex', 'AWS']}
-                    image="/photo_2024-09-11_19-57-53.jpg"
+                    image="/Untitled design (7).png"
                 />
         </div>
         </div>
