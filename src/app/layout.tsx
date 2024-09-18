@@ -8,11 +8,50 @@ import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Harry Campbell",
-  description: "Harry Campbell is a UK-based software engineer specializing in security and full stack development, with 3+ years of experience. Founder of Hdev Group and skilled in various technologies, Harry is open to new opportunities.",
-  keywords: ["Harry Campbell", "Harry", "Harry campbell", "developer harry", "swe harry", "software harry" ,"Campbell", "livepool dev", "coder", "liverpool", "website developer", "best developer st helens", "website engineer", "st helens dev", "manchester developer", "web dev manchester", "full stack", "Hdev Group", "Hdev", "Group", "Software Developer", "Web Developer", "Security Engineer", "Full Stack Developer", "Frontend Developer", "Backend Developer", "Database Developer", "UK", "England", "United Kingdom", "Europe", "Europe", "Web Development", "Security Engineering", "security", "application developer", "webapp dev", "Near me", "Senior developer"],
-  
+  title: "Harry Campbell - Full Stack Developer & Security Engineer | Hdev Group Founder",
+  description:
+    "Harry Campbell is an experienced full stack developer and security engineer based in the UK, specializing in secure web application development and software engineering. As the founder of Hdev Group, Harry brings over 3 years of expertise in building scalable, high-performance digital solutions. Available for freelance projects, collaborations, and full-time opportunities globally.",
+  keywords: [
+    "Harry Campbell", 
+    "Full Stack Developer UK", 
+    "Security Engineer UK", 
+    "Freelance Software Developer", 
+    "Web Application Developer", 
+    "Founder of Hdev Group", 
+    "Senior Software Engineer", 
+    "Secure Web Development", 
+    "Cybersecurity Expert", 
+    "Software Development Consultant", 
+    "Liverpool Web Developer", 
+    "Manchester Software Developer", 
+    "UK-based Full Stack Developer", 
+    "Experienced Developer for Hire", 
+    "Web Development Expert UK", 
+    "JavaScript Developer UK", 
+    "React Developer", 
+    "Node.js Developer", 
+    "Frontend and Backend Developer", 
+    "API Developer", 
+    "Database Management", 
+    "Software Security Specialist", 
+    "Web Developer Near Me", 
+    "Top Software Engineer UK", 
+    "Best Developer St Helens", 
+    "Freelance Developer Manchester", 
+    "Full Stack Engineer Europe", 
+    "Cybersecurity Engineer UK", 
+    "Tech Consultant UK", 
+    "Freelance Web Developer UK", 
+    "Tech Innovator UK", 
+    "Remote Software Engineer", 
+    "Digital Solutions Architect", 
+    "Startup Software Developer", 
+    "Software Engineer for Hire", 
+    "Security Engineer for Startups"
+  ],
 };
+
+
 
 export default function RootLayout({
   children,
