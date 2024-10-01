@@ -1,7 +1,7 @@
 export default function Projects() {
     function ProjectCard({title, description, link, image, technology, type}: any) {
         return (
-          <div className="boxbg rounded-xl max-w-[45%] w-full md:min-h-[11.5rem] flex-wrap h-full relative shinytop p-6 flex flex-col gap-4 uppop">  
+          <div className="boxbg rounded-xl md:max-w-[45%] w-full md:min-h-[11.5rem] flex-wrap h-full relative shinytop p-6 flex flex-col gap-4 uppop">  
             <div className='flex flex-col relative w-[100%] '>
                 <div className="w-full h-full relative">
                     <img src={image} alt={title} className='h-auto rounded-md w-auto'/>
