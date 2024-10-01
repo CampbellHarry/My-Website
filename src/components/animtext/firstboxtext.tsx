@@ -191,8 +191,11 @@ export function CtaZone(){
   return(
   <div className="font-normal text-white mb-4 w-full flex-wrap flex flex-row gap-3.5 text-4xl md:text-6xl">
     <h1 className="CTAZoner" style={{ lineHeight: '140%', overflow: 'hidden' }}>Let's</h1>
-    <h1 className="CTAZoner" style={{ lineHeight: '140%', overflow: 'hidden' }}>Get</h1>
-    <h1 className="CTAZoner" style={{ lineHeight: '140%', overflow: 'hidden' }}>Developing</h1>
+    <h1 className="CTAZoner" style={{ lineHeight: '140%', overflow: 'hidden' }}>Develop</h1>
+    <h1 className="CTAZoner" style={{ lineHeight: '140%', overflow: 'hidden' }}>The</h1>
+    <h1 className="CTAZoner" style={{ lineHeight: '140%', overflow: 'hidden' }}>Next</h1>
+    <h1 className="CTAZoner" style={{ lineHeight: '140%', overflow: 'hidden' }}>Big</h1>
+    <h1 className="CTAZoner" style={{ lineHeight: '140%', overflow: 'hidden' }}>Thing</h1>
     <h1 className="CTAZoner" style={{ lineHeight: '140%', overflow: 'hidden' }}>—</h1>
     <h1 className="CTAZoner" style={{ lineHeight: '140%', overflow: 'hidden' }}>Today</h1>
   </div>
@@ -221,7 +224,7 @@ export function Testimonials1(){
   return(
     <div className="flex flex-row  gap-5 w-full">
     <div className="flex flex-col relative items-center justify-center">
-      <img className="w-10 sticky top-10 rounded-full h-10" src="https://media.licdn.com/dms/image/v2/D4E03AQHVOQmOMUpKxQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1721862688194?e=1731542400&v=beta&t=mBGXzIhfvpayPcCuW7RsDDP9SgD49pO9V9W_4Ar0odY"></img>
+      <img className="w-10 sticky top-10 rounded-full h-10" src="https://media.licdn.com/dms/image/v2/D4E03AQH2csyzpMClvw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1726555618231?e=1733356800&v=beta&t=7bK5BH9Z-T-vM_IM6wl3ijCBw3byK0guAzic8RsNssQ"></img>
       <div className="border-l h-full border-neutral-800" />
     </div>
     <div className="flex flex-col pb-10 pt-4 w-full relative">

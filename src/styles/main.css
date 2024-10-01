@@ -78,6 +78,15 @@ body{
     border-image: linear-gradient(to right, #40e0d000, #55e0d270, #55e0d2, #55e0d270, #40e0d000) 1;
     transition: all 0.5s;
 }
+.mainlinker .dalinker {
+    transition: transform 0.2s ease;
+}
+
+.mainlinker:hover .dalinker {
+    animation: none;
+    transform: rotate(-45deg);
+}
+
 .fulltopgradient{
     background: linear-gradient(to top,hsl(232 30% 8%/ 1) 0,hsl(232 30% 8% / 0)),linear-gradient(45deg,#55e0d270 12%,#116852 34%,#2e0168 80%)
 }
