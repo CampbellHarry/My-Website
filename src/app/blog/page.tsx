@@ -28,7 +28,7 @@ export default function BlogPage() {
                                         className="bg-transparent border-b border-zinc-400 text-zinc-400 p-2 w-full mt-2"
                                     />
                                 </div>
-                                <div className='flex flex-row justify-center items-center gap-3 mt-10 flex-wrap'>
+                                <div className='flex flex-row justify-center items-center mt-10 flex-wrap'>
                                     <Blogs searches={blogsearch} />
                                 </div>
                             </div>
@@ -73,7 +73,7 @@ function Blogs({ searches }: { searches: string }) {
                 return res.json(); // Parse the response as JSON
             })
             .then((data) => {
-                setBlogs(data);
+                setBlogs(data.reverse());
                 setLoading(false);
             })
             .catch((err) => {
@@ -89,8 +89,8 @@ function Blogs({ searches }: { searches: string }) {
             blog.techstack.some((tech: string) =>
                 tech.toLowerCase().includes(searches.toLowerCase())
             )
-        )
-        : blogs; // if no results show error
+        ).reverse()
+        : blogs.reverse(); // if no results show error
         if (filteredBlogs.length === 0 && !loading) {
             return (
                 <div className="flex  min-h-screen">
@@ -113,51 +113,52 @@ function Blogs({ searches }: { searches: string }) {
                 </div>
             ) : (
                 filteredBlogs.map((blog: any) => (
-                    <div key={blog.number} className='flex flex-row justify-between w-full gap-5'>
-                        <div className="flex flex-col relative items-center justify-center">
-                            <div className="w-6 sticky top-24 flex items-center justify-center bg-blue-800/80 rounded-full h-6">{blog.number}</div>
-                            <div className="border-l h-full border-neutral-800" />
-                            {blog.number !== blogs.length && (
-                                <div className="border-b h-full border-blue-800" />
-                            )}
+                    <div key={blog.number} className="flex flex-row justify-between h-full w-full gap-5">
+                    <div className="flex flex-col relative items-center justify-center  h-auto min-h-full">
+                        <div className="w-6 sticky top-24 flex items-center justify-center bg-blue-800/80  rounded-full h-6">
+                            {blog.number}
                         </div>
-                        <div className="boxbg rounded-xl w-full md:min-h-[11.5rem] flex-wrap h-full relative shinytop p-6 flex flex-col gap-4 uppop">
-                            <div className='flex flex-col relative w-[100%]'>
-                                <div className='flex flex-row gap-2 items-center justify-between mb-4'>
-                                    <div className='flex flex-row gap-2'>
-                                        <CalendarDaysIcon size={18} className="text-gray-300" />
-                                        <p className="text-gray-300 text-sm">
-                                            {new Date(blog.created).toLocaleDateString()}
-                                        </p>
-                                    </div>
-                                    <span className="bg-gray-700 text-white px-2 py-1 rounded text-sm">
-                                        {readtimecalc(blog.body)} read
-                                    </span>
+                        <div className="border-l border-neutral-800 flex-grow pb-3 h-full" />
+                    </div>
+                    <div className="boxbg rounded-xl w-full md:min-h-[11.5rem] mb-4 flex-wrap h-auto relative shinytop p-6 flex flex-col gap-4 uppop">
+                        <div className="flex flex-col relative w-[100%]">
+                            <div className="flex flex-row gap-2 items-center justify-between mb-4">
+                                <div className="flex flex-row gap-2">
+                                    <CalendarDaysIcon size={18} className="text-gray-300" />
+                                    <p className="text-gray-300 text-sm">
+                                        {new Date(blog.created).toLocaleDateString()}
+                                    </p>
                                 </div>
-                                <div className='flex relative items-center justify-between'>
-                                    <h3 className="text-xl font-semibold text-white px-1.5 py-1">{blog.title}</h3>
-                                    <span className="bg-green-700 text-white px-2 py-1 mt-2 rounded text-sm">
-                                        {blog.type}
-                                    </span>
-                                </div>
+                                <span className="bg-gray-700 text-white px-2 py-1 rounded text-sm">
+                                    {readtimecalc(blog.body)} read
+                                </span>
                             </div>
-                            <p className="text-gray-300 text-sm px-1.5">
-                                {blog.body.split(' ').slice(0, 35).join(' ')}...
-                            </p>
-                            <div className="flex flex-wrap gap-2 px-1.5 flex-row">
-                                {blog.techstack.map((tech: string) => (
-                                    <span key={tech} className="bg-gray-700 text-white px-2 py-1 rounded text-sm">
-                                        {tech}
-                                    </span>
-                                ))}
+                            <div className="flex relative items-center justify-between">
+                                <h3 className="text-xl font-semibold text-white px-1.5 py-1">
+                                    {blog.title}
+                                </h3>
+                                <span className="bg-green-700 text-white px-2 py-1 mt-2 rounded text-sm">
+                                    {blog.type}
+                                </span>
                             </div>
-                            <div className="flex flex-wrap gap-2 px-1.5">
-                                <a href={`/blog/${blog.number}`} className="text-white bg-gradient-to-tr from-teal-400 to-teal-800 hover:shadow-xl shadow-white mainlinker relative pr-8 pl-3  py-1 rounded text-sm">
-                                    Read More <span className="text-white font-bold text-md absolute ml-2 dalinker">→</span>
-                                </a>
-                            </div>
+                        </div>
+                        <p className="text-gray-300 text-sm px-1.5">
+                            {blog.body.split(' ').slice(0, 35).join(' ')}...
+                        </p>
+                        <div className="flex flex-wrap gap-2 px-1.5 flex-row">
+                            {blog?.techstack?.map((tech: string) => (
+                                <span key={tech} className="bg-gray-700 text-white px-2 py-1 rounded text-sm">
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                        <div className="flex flex-wrap gap-2 px-1.5">
+                            <a href={`/blog/${blog.number}`} className="text-white bg-gradient-to-tr from-teal-400 to-teal-800 hover:shadow-xl shadow-white mainlinker relative pr-8 pl-3 py-1 rounded text-sm">
+                                Read More <span className="text-white font-bold text-md absolute ml-2 dalinker">→</span>
+                            </a>
                         </div>
                     </div>
+                </div>                
                 ))
             )}
         </>

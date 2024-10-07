@@ -179,7 +179,7 @@ function Blog() {
               {blog.body.split(' ').slice(0, 35).join(' ')}...
             </p>
             <div className="flex flex-wrap gap-2 px-1.5 flex-row">
-              {blog.techstack.map((tech: string) => (
+              {blog?.techstack?.map((tech: string) => (
                 <span key={tech} className="bg-gray-700 text-white px-2 py-1 rounded text-sm">
                   {tech}
                 </span>
