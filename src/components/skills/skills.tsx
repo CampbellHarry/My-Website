@@ -55,7 +55,7 @@ export default function Skills() {
     return(
         <div className="flex flex-col mt-12 w-full">
 <h1 className="font-medium text-white text-3xl mb-12">My Skills</h1>
-<div className="flex  flex-row flex-wrap items-top justify-center md:flex-row gap-5 w-full">
+<div className="flex  flex-row flex-wrap items-top justify-left md:flex-row gap-5 w-full">
 <SkillCard
   title="React"
   description="I use React to build user interfaces and web applications."

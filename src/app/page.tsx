@@ -104,12 +104,13 @@ export default function Home() {
       </div>
       <Projects />
       <Skills />
-      <div className="flex flex-col mt-12 w-full">
+      <div className="flex flex-col mt-12 mb-12 w-full">
         <h1 className="font-medium text-white text-3xl mb-12">Testimonials</h1>
         <Testimonials1 />
         <Testimonials2 />
         <Testimonials3 />
       </div>
+      <Blog />
       </div>
       </div>
       <section className="flex flex-col mt-10 h-auto w-full gradiented  items-center justify-center" id="contact">
@@ -133,5 +134,71 @@ export default function Home() {
     </div>
     </div>
     </>
+  );
+}
+
+function Blog() {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/grab-blog') // This will make a GET request
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json(); // Parse the response as JSON
+      })
+      .then((data) => {
+        setBlogs(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+
+
+  return (
+    <div>
+      <h1 className="font-medium text-white text-3xl mb-12">Blogs</h1>
+      <div className="flex flex-col gap-5 w-full">
+        <div className="flex flex-row gap-3 flex-wrap">
+        {blogs
+          .sort((a: any, b: any) => new Date(b.created).getTime() - new Date(a.created).getTime())
+          .slice(0, 2)
+          .map((blog: any) => (
+          <div key={blog.number} className="boxbg rounded-xl md:max-w-[45%] w-full md:min-h-[11.5rem] flex-wrap h-full relative shinytop p-6 flex flex-col gap-4 uppop">
+            <div className='flex flex-col relative w-[100%] '>
+              <div className='flex relative items-center justify-between'>
+                <h3 className="text-xl font-semibold text-white px-1.5 py-1">{blog.title}</h3>
+                <span className="bg-green-700 text-white px-2 py-1 mt-2 rounded text-sm">
+                  {blog.type}
+                </span>
+              </div>
+            </div>
+            <p className="text-gray-300 text-sm px-1.5">
+              {blog.body.split(' ').slice(0, 35).join(' ')}...
+            </p>
+            <div className="flex flex-wrap gap-2 px-1.5 flex-row">
+              {blog.techstack.map((tech: string) => (
+                <span key={tech} className="bg-gray-700 text-white px-2 py-1 rounded text-sm">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2 px-1.5">
+              {blog.number !== '' ? (
+                <a href={`/blog/${blog.number}`} className="text-white bg-gradient-to-tr from-purple-400/60 cursor-pointer to-purple-400 hover:shadow-xl shadow-white mainlinker relative pr-8 pl-3  py-1 rounded text-sm">
+                  View more of {blog.title} <span className="text-white font-bold text-md absolute ml-2 dalinker ">→</span>
+                </a>
+              ) : (
+                null
+              )}
+            </div>
+          </div>
+        ))}
+        </div>
+        <a href="/blog" className="text-white text-center">View more</a>
+      </div>
+    </div>
   );
 }

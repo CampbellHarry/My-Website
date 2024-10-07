@@ -224,7 +224,7 @@ export function Testimonials1(){
   return(
     <div className="flex flex-row  gap-5 w-full">
     <div className="flex flex-col relative items-center justify-center">
-      <img className="w-10 sticky top-10 rounded-full h-10" src="https://media.licdn.com/dms/image/v2/D4E03AQH2csyzpMClvw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1726555618231?e=1733356800&v=beta&t=7bK5BH9Z-T-vM_IM6wl3ijCBw3byK0guAzic8RsNssQ"></img>
+      <img className="w-10 sticky top-10 rounded-full h-10" src="https://media.licdn.com/dms/image/v2/D4E03AQHrICZcMjsVaQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727889807859?e=1733961600&v=beta&t=EpYS8VK8rTfUfItsGs5uOC-kgcwl9jG0spz6n1pmkvI"></img>
       <div className="border-l h-full border-neutral-800" />
     </div>
     <div className="flex flex-col pb-10 pt-4 w-full relative">
