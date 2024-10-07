@@ -95,11 +95,11 @@ export default function Home() {
           <a className="boxbg rounded-xl shinytop px-4 md:p-5 gap-5 py-8 w-full md:w-[20%] max-h-[7rem] min-h-[7rem] h-full flex items-center justify-center flex-col text-white" href="https://www.linkedin.com/in/harry-campbell-75ab83250/">
                 <LinkedinView />
           </a>
-          <div className="boxbg rounded-xl shinytop relative px-4 md:p-6 gap-5 py-8 w-full md:w-[20%] max-h-[7rem] min-h-[7rem] h-full flex items-center justify-center flex-col text-white">
+          <a href="#contact" className="boxbg rounded-xl shinytop relative px-4 md:p-6 gap-5 py-8 w-full md:w-[20%] max-h-[7rem] min-h-[7rem] h-full flex items-center justify-center flex-col text-white">
             <div className="flex items-center flex-col overflow-hidden">
               <h1 className="font-semibold ">Contact</h1>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <Projects />
