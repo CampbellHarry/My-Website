@@ -136,8 +136,8 @@ export default function BlogPage({ params: { _blogid } }: BlogPageProps){
                                                                 </p>
                                                             ))}
                                                         </div>
-                                                        <div className='border-t border-b border-neutral-800/50 mt-10 gap-10 items-center h-40 flex flex-row'>
-                                                            <h1 className='text-xl font-semibold'>The Author</h1>
+                                                        <div className='border-t border-b border-neutral-800/50 mt-10 gap-10  md:items-center h-40 flex flex-col md:flex-row'>
+                                                            <h1 className='text-xl font-semibold mt-5 md:mt-0'>The Author</h1>
                                                             <div className='flex flex-row gap-5 items-center'>
                                                                 <img src={authorimage} className='h-12 w-12 rounded-full'></img>
                                                                 <div className='flex flex-col justify-between items-start'>
