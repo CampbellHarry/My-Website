@@ -2,7 +2,7 @@
 import Header from '@/components/header/header';
 import Footer from '@/components/footer/footer';
 import React, { useState, useEffect } from 'react';
-import { CalendarDaysIcon, AlertTriangle } from 'lucide-react'
+import { CalendarDaysIcon, AlertTriangle, ArrowLeft } from 'lucide-react'
 
 interface BlogPageProps {
     params: {
@@ -106,7 +106,8 @@ export default function BlogPage({ params: { _blogid } }: BlogPageProps){
                                                 blog.map((blogItem: any) => (
                                                     <div key={blogItem.id} className="py-1 rounded shadow-md w-full">
                                                         <div className='flex flex-col gap-2 pb-5 0'>
-                                                            <div className='w-min'>
+                                                            <div className='w-min flex flex-col gap-3'>
+                                                                <a className='flex flex-row items-center text-xs gap-1' href='/blog'><ArrowLeft width={14} height={14} /> Back</a>
                                                                 <p className='text-xs cursor-pointer hover:text-blue-400 font-semibold'>{blogItem.type}</p>
                                                             </div>
                                                             <h2 className="font-bold text-3xl">{blogItem.title}</h2>
