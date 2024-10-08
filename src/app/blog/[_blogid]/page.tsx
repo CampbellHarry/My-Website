@@ -3,6 +3,7 @@ import Header from '@/components/header/header';
 import Footer from '@/components/footer/footer';
 import React, { useState, useEffect } from 'react';
 import { CalendarDaysIcon, AlertTriangle, ArrowLeft } from 'lucide-react'
+import Head from 'next/head';
 
 interface BlogPageProps {
     params: {
@@ -53,6 +54,8 @@ export default function BlogPage({ params: { _blogid } }: BlogPageProps){
             return `${hours} hour${hours > 1 ? 's' : ''} ${remainingMinutes > 0 ? `and ${remainingMinutes} minute${remainingMinutes > 1 ? 's' : ''}` : ''}`;
         }
     }
+
+
     const blogauthor = blog.map((blogItem: any) => blogItem.author);
     const blogtitle = blog.map((blogItem: any) => blogItem.title);
     var authorimage = "";
@@ -71,6 +74,7 @@ export default function BlogPage({ params: { _blogid } }: BlogPageProps){
 
     return(
         <>
+
             <div className="bg-gradient-to-tr flex items-center justify-center background w-full h-full relative m-0  bg-no-repeat">
                 <div className="flex w-full items-center relative flex-col">
                     <Header />

@@ -13,7 +13,6 @@ export async function GET(req) {
     const { searchParams } = new URL(req.url);
     const blogId = searchParams.get('blogid'); // use _blogid as per your fetch request
 
-    console.log('Requested blogId:', blogId);
 
     // Fetch multiple entries from Contentful
     const entries = await client.getEntries({
@@ -21,7 +20,6 @@ export async function GET(req) {
     });
 
     // Log all blognum values for debugging
-    console.log('All blognum values:', entries.items.map(entry => entry.fields.blognum));
 
     // Find the blog entry with the matching blognum (convert both to strings for comparison)
     const blogIndex = entries.items.findIndex(entry => String(entry.fields.blognum) === String(blogId));
