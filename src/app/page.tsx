@@ -102,7 +102,9 @@ export default function Home() {
           </a>
         </div>
       </div>
+      <section id="projects">
       <Projects />
+      </section>
       <Skills />
       <div className="flex flex-col mt-12 mb-12 w-full">
         <h1 className="font-medium text-white text-3xl mb-12">Testimonials</h1>

@@ -55,6 +55,9 @@ const AnimatedText = () => {
         <div className="wordshow">I</div>
         <div className="wordshow">am</div>
         <div className="wordshow">a</div>
+        <div className="wordshow">17</div>
+        <div className="wordshow">year</div>
+        <div className="wordshow">old</div>
         <div className="wordshow">software</div>
         <div className="wordshow">engineer</div>
         <div className="wordshow">with</div>
