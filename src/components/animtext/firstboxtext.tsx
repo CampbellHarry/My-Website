@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { useState } from "react";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Github, MapPin } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,27 +11,6 @@ const AnimatedText = () => {
     useEffect(() => {
         const wordshower = document.querySelectorAll('.wordshow');
         const fulltopgradient = document.querySelector('.fulltopgradient');
-        if (window.innerWidth <= 640) {
-          gsap.to(fulltopgradient, {
-            width: "100%",
-            duration: 0,
-          });
-        } else {
-        gsap.fromTo(
-          fulltopgradient,
-          { width: "120%", position: 'relative' },
-          {
-            width: "90rem",
-            position: 'relative',
-            opacity: 1,
-            duration: 3,
-            scrollTrigger: {
-              trigger: fulltopgradient,
-              start: 'top 80%',
-            },
-          }
-        );
-      }
         wordshower.forEach((word, index) => {
           gsap.fromTo(
             word,
@@ -170,6 +150,31 @@ export function LinkedinView() {
             <h1 className="font-semibold">Linkedin</h1>
         </div>
     )
+}
+export function GitHubView() {
+  useEffect(() => {
+      const linkedin = document.querySelectorAll('.bluespin');
+        gsap.fromTo(
+          linkedin,
+          { y: 30, opacity: 0, color: '#0072b1'},
+          {
+            y: 0,
+            color: '#fff',
+            opacity: 1,
+            duration: .5,
+            scrollTrigger: {
+              trigger: linkedin,
+              start: 'top 70%',
+            },
+          }
+        );
+    }, []);
+  return (
+      <div className="flex items-center gap-2 flex-col">
+        <Github className="flex bluespin" />
+        <h1 className="font-semibold">GitHub</h1>
+      </div>
+  )
 }
 export function CtaZone(){
   useEffect(() => {
@@ -536,56 +541,12 @@ export function Testimonials3(){
   )
 }
 export function Gripperzoom(){
-  // we will have a cursor that will drag the image into position
-  useEffect(() => {
-    const Gripperzoom = document.querySelectorAll('.Gripperzoom');
-    const cursormover = document.querySelectorAll('.cursormover');
-    if (window.innerWidth <= 640) {
-      gsap.to(Gripperzoom, {
-        width: "100%",
-        duration: 0,
-      });
-    } else {
-      gsap.fromTo(
-        Gripperzoom,
-        { top: 0, left: "-70rem", opacity: 0, position: "relative", width: "100%", },
-        {
-          top: "0rem",
-          width: "50rem",
-          position: "relative",
-          left: 0,
-          zIndex: 50,
-          opacity: 1,
-          duration: 3,
-          scrollTrigger: {
-            trigger: Gripperzoom,
-            start: 'top 80%',
-          },
-        }
-      );
-      gsap.to(
-        cursormover,
-        {
-          delay: 3,
-          opacity: 0,
-          left: "-70rem",
-          top: "-20rem",
-          duration: 3,
-          scrollTrigger: {
-            trigger: Gripperzoom,
-            start: 'top 80%',
-          },
-        }
-      );
-    }
-  }, []);
+
 
   return(
     <>
     <div className="flex flex-row relative z-50 w-full md:w-1/2 Gripperzoom">
-    <div className="absolute w-8 hidden sm:flex z-50 right-0 text-white top-4 cursormover">
-      <svg className="w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.9093 12.3603L17.0007 20.8537L14.1816 21.8798L11.0902 13.3864L6.91797 16.5422L8.4087 1.63318L19.134 12.0959L13.9093 12.3603Z"></path></svg>
-    </div>
+
     <div className="boxbg rounded-3xl relative shinytop overflow-hidden px-4 md:p-6 gap-5 py-8 w-full min-h-[20rem] h-full flex items-center justify-center flex-col text-white">
     <Image 
                 src="/1720299869628.jpeg" 
@@ -594,9 +555,12 @@ export function Gripperzoom(){
                 height={160}
                 className="rounded-full"
               />
-      <div className="flex items-center flex-col">
+      <div className="flex items-left flex-col">
         <h1 className="font-bold text-xl bg-gradient-to-r from-neutral-400 via-white to-neutral-400 text-transparent bg-clip-text">Harry Campbell</h1>
         <p className="font-medium">Security. Development. Planning.</p>
+        <div className="flex flex-row items-center gap-1 mt-1">
+          <MapPin className="h-5" /> <p className="text-sm">Liverpool, United Kingdom</p>
+        </div>
       </div>
     </div>
     </div>

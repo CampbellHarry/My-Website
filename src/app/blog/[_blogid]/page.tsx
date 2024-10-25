@@ -104,17 +104,17 @@ export default function BlogPage({ params: { _blogid } }: BlogPageProps){
                                         {
                                             loading ? (
                                                 <div className="flex flex-col items-center justify-center w-full h-full">
-                                                    <div className="animate-spin rounded-full h-24 w-24 border-t-2 border-b-2 border-neutral-400"></div>
+                                                    <div className="animate-spin rounded-full h-24 w-24 border-t-2 border-b-2 text-white border-neutral-400"></div>
                                                 </div>
                                             ) : (
                                                 blog.map((blogItem: any) => (
-                                                    <div key={blogItem.id} className="py-1 rounded shadow-md w-full">
+                                                    <div key={blogItem.id} className="py-1 rounded shadow-md w-full text-white">
                                                         <div className='flex flex-col gap-2 pb-5 0'>
                                                             <div className='w-min flex flex-col gap-3'>
                                                                 <a className='flex flex-row items-center text-xs gap-1' href='/blog'><ArrowLeft width={14} height={14} /> Back</a>
-                                                                <p className='text-xs cursor-pointer hover:text-blue-400 font-semibold'>{blogItem.type}</p>
+                                                                <p className='text-xs cursor-pointer hover:text-blue-400 text-neutral-400 font-semibold'>{blogItem.type}</p>
                                                             </div>
-                                                            <h2 className="font-bold text-3xl">{blogItem.title}</h2>
+                                                            <h2 className="font-bold text-3xl text-white">{blogItem.title}</h2>
                                                             <div className='flex flex-row gap-2  mt-2'>
                                                                 <img src={authorimage} className='h-10 w-10 rounded-full'></img>
                                                                 <div className='flex flex-col justify-between'>
