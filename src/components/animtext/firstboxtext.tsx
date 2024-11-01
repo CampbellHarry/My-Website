@@ -242,7 +242,6 @@ export function Testimonials1(){
           <div className="font-semibold flex-row flex gap-2 text-2xl mb-0.5 text-white">
             <h1 className="Testimonial1">Kian</h1><h1 className="Testimonial1">Gentry</h1>
           </div>
-          <h2 className="font-normal text-sm">Technical Designer @ Hdev Group | Software Developer | Producer | Student</h2>
         </div>
         <div className="font-normal text-xl flex flex-row flex-wrap gap-1">
           <p className="Testimonial1" style={{ lineHeight: '140%', overflow: 'hidden'}}>I've</p>
@@ -340,7 +339,6 @@ export function Testimonials2(){
         <div className="font-semibold flex-row flex gap-2 text-2xl mb-0.5 text-white">
             <h1 className="Testimonial2">Finley</h1><h1 className="Testimonial2">Martin</h1>
           </div>
-          <h2 className="font-normal text-sm">Student | Programmer | Graphical Designer | Full Stack Developer.</h2>
         </div>
         <div className="font-normal text-xl flex flex-row flex-wrap gap-1">
           <p className="Testimonial2" style={{ lineHeight: '140%', overflow: 'hidden'}}>I</p>
@@ -456,12 +454,11 @@ export function Testimonials3(){
     </div>
     <div className="flex flex-col pb-10 pt-4 w-full relative">
     <div className="absolute top-4 left-[-.9rem] boxbg rounded-bl-3xl bg-white h-4 w-9 "/>
-      <div className="flex flex-col gap-2 boxbg py-4 px-4 rounded-lg">
+      <div className="flex flex-col gap-2 boxbg py-7 px-9 rounded-lg">
         <div>
           <div className="font-semibold flex-row flex gap-2 text-2xl mb-0.5 text-white">
             <h1 className="Testimonial3">Konrad</h1><h1 className="Testimonial3">Gardy</h1>
           </div>          
-          <h2 className="font-normal text-sm">Customer Service Deputy Manager at Letsproo sp zoo</h2>
         </div>
         <div className="font-normal text-xl flex flex-row flex-wrap gap-1">
           <p className="Testimonial3" style={{ lineHeight: '140%', overflow: 'hidden'}}>Harry</p>

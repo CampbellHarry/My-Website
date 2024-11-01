@@ -4,9 +4,9 @@ import { title } from "process";
 export default function Projects() {
             const router = useRouter();
         
-            function ProjectCard({ title, description, link, image, technology, type, colour }: any) {
+            function ProjectCard({ title, description, link, image, technology, type, colour, projectpage }: any) {
                 return (
-                  <div onClick={() => link && router.push(link)} className="boxbg rounded-xl cursor-pointer md:max-w-[45%] overflow-hidden w-full  md:min-h-[11.5rem] flex-wrap h-full relative shinytop flex flex-col gap-4 uppop hover:shadow-lg hover:scale-105 transition-transform duration-300 eas</div>e-in-out">
+                  <div onClick={() => link && router.push(link) || projectpage && router.push(projectpage)} className="boxbg rounded-xl cursor-pointer md:max-w-[45%] overflow-hidden w-full  md:min-h-[11.5rem] flex-wrap h-full relative shinytop flex flex-col gap-4 uppop hover:shadow-lg hover:scale-105 transition-transform duration-300 eas</div>e-in-out">
             
             {/* Main Card Content */}
             <div className="flex flex-col relative w-[100%] h-80">
@@ -59,6 +59,16 @@ export default function Projects() {
                         </a>
                     </div>
                 )}
+                {projectpage && (
+                    <div className="flex flex-row items-center">
+                        <a
+                            href={projectpage}
+                            className="text-black bg-white w-auto pr-8 pl-3 py-1 rounded text-sm font-semibold transition-all duration-300 relative"
+                        >
+                        {title} Project Page  <span className="text-black font-bold text-md absolute ml-2">→</span>
+                        </a>
+                    </div>
+                )}
               </div>
             </div>
           </div>
@@ -86,7 +96,8 @@ export default function Projects() {
                         type: "In Progress",
                         colour: "dark",
                         technology: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'Convex', 'AWS'],
-                        image: "/Screenshot 2024-10-25 172201.png"
+                        image: "/Screenshot 2024-10-25 172201.png",
+                        projectpage: "/projects/textuality"
                     },
                     {
                         title: "HSpace",

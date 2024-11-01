@@ -79,7 +79,7 @@ export default function Header() {
         </div>
         <header className="w-full :flex sticky top-0 z-50 mt-12 max-w-fit sm:px-2 items-center justify-center dropintime">
             <div className="relative h-full">
-                    <div className="mx-auto w-full h-full md:min-w-[900px] sm:min-w-[550px]  md:max-w-[900px] px-4 pb-[20px] pt-6 text-lg md:px-16">
+                    <div className="mx-auto w-full h-full md:min-w-[900px] sm:min-w-[550px] md:max-w-[900px] px-4 pb-[20px] pt-6 text-lg md:px-16">
                         <div className="w-full flex justify-between items-center px-5 py-5 backdrop-blur-md headerbackground border-zinc-600 rounded-full h-12 border">
                             <div className="flex flex-row justify-between w-full text-neutral-300">
                                 <div className="h-12 items-center hover:text-zinc-50 cursor-pointer sm:hidden flex transition-all" onClick={mobileopener}>
